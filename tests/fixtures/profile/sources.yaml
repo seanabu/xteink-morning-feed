@@ -1,0 +1,14 @@
+- name: Fixture Always
+  url: https://always.example.test/feed
+  tier: always
+  topic: topic-a
+  paywall: substack
+- name: Fixture Filtered
+  url: https://filtered.example.test/feed
+  tier: filtered
+  topic: topic-b
+  skip_if_title_matches: ["(?i)podcast"]
+- name: Fixture Pending
+  tier: filtered
+  topic: topic-b
+  verify: true

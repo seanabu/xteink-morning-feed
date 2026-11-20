@@ -1,0 +1,14 @@
+# Copy this folder to profiles/<your-name>/ and edit. All keys are optional except name.
+name: Your Name
+timezone: America/New_York
+catalog_title: Morning Feed
+daily_target: 14
+topic_cap: 5
+retention_days: 7
+min_read_minutes: 3
+fetch_window_hours: 36
+max_images: 4
+ranking: keywords        # or: llm
+whole_day_epub: true
+catalog_layout: nested   # or: flat
+nyt_mode: headlines      # or: off, full_text

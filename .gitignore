@@ -1,0 +1,19 @@
+# Secrets
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+*.egg-info/
+
+# Build output (published to gh-pages, never committed on main)
+site/
+.cache/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

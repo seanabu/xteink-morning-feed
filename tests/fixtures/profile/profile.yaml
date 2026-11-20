@@ -1,0 +1,4 @@
+name: Test Reader
+timezone: UTC
+daily_target: 3
+topic_cap: 2

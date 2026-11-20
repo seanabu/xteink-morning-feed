@@ -1,0 +1,258 @@
+# Sean's sources. tier: always skips the ranker; tier: filtered is ranked by topic fit.
+# verify: true means the feed URL still needs a human to confirm it (flagged by --check).
+
+# ---------- Always include ----------
+- name: Derek Thompson
+  url: https://www.derekthompson.org/feed
+  tier: always
+  topic: econ-politics
+  paywall: substack
+  notes: Some posts paid
+
+- name: Kyla Scanlon
+  url: https://kyla.substack.com/feed
+  tier: always
+  topic: economics
+  paywall: substack
+  verify: true
+
+- name: Vanishing Gradients
+  url: https://hugobowne.substack.com/feed
+  tier: always
+  topic: ds-ai
+  paywall: substack
+  skip_if_title_matches: ["(?i)\\bepisode\\b", "(?i)\\bpodcast\\b", "(?i)livestream", "(?i)^ep\\.? ?\\d"]
+  notes: Skip podcast-only posts
+
+- name: Sinéad Bovell
+  url: https://sineadbovell.substack.com/feed
+  tier: always
+  topic: ai-society
+  paywall: substack
+
+- name: Moontower
+  url: https://moontower.substack.com/feed
+  tier: always
+  topic: markets
+  paywall: substack
+  verify: true
+
+- name: Worse on Purpose
+  url: https://rss.beehiiv.com/feeds/J17ICFTI1f.xml
+  tier: always
+  topic: business
+  notes: beehiiv, weekly Wed
+
+- name: The Lowe Post
+  url: https://zachlowe.substack.com/feed
+  tier: always
+  topic: nba
+  paywall: substack
+  verify: true
+  notes: Found at zachlowe.substack.com; free posts only
+
+# ---------- Filtered pool ----------
+- name: Hacker News — Show HN
+  url: https://hnrss.org/show?points=100
+  tier: filtered
+  topic: ai-builds
+  extract: page
+  points_min: 100
+  max_words: 15000
+
+- name: Hacker News — front page
+  url: https://hnrss.org/frontpage?points=150
+  tier: filtered
+  topic: ai-ds
+  extract: page
+  points_min: 150
+  max_words: 15000
+
+- name: Simon Willison
+  url: https://simonwillison.net/atom/everything/
+  tier: filtered
+  topic: ai
+  min_words: 500
+  notes: Long entries only, skip short links
+
+- name: Latent Space
+  url: https://latent.space/feed
+  tier: filtered
+  topic: ai-engineering
+  paywall: substack
+  verify: true
+
+- name: Interconnects
+  url: https://www.interconnects.ai/feed
+  tier: filtered
+  topic: ai
+  paywall: substack
+  verify: true
+
+- name: Ahead of AI
+  url: https://magazine.sebastianraschka.com/feed
+  tier: filtered
+  topic: ai-ml
+  paywall: substack
+  verify: true
+
+- name: One Useful Thing
+  url: https://www.oneusefulthing.org/feed
+  tier: filtered
+  topic: ai
+  paywall: substack
+  verify: true
+
+- name: Statsig blog
+  tier: filtered
+  topic: experimentation
+  verify: true
+  notes: No public RSS found at statsig.com/blog; needs a feed URL
+
+- name: Statistical Modeling
+  url: https://statmodeling.stat.columbia.edu/feed/
+  tier: filtered
+  topic: statistics
+  verify: true
+
+- name: Benn Stancil
+  url: https://benn.substack.com/feed
+  tier: filtered
+  topic: data
+  paywall: substack
+  verify: true
+
+- name: Eugene Yan
+  url: https://eugeneyan.com/rss/
+  tier: filtered
+  topic: ml-ds
+  verify: true
+
+- name: Noahpinion
+  url: https://www.noahpinion.blog/feed
+  tier: filtered
+  topic: economics
+  paywall: substack
+
+- name: Marginal Revolution
+  url: https://marginalrevolution.com/feed
+  tier: filtered
+  topic: economics
+  weight: 0.7
+  notes: High volume; rank hard
+
+- name: Apricitas Economics
+  url: https://www.apricitas.io/feed
+  tier: filtered
+  topic: economics
+  paywall: substack
+  verify: true
+
+- name: Calculated Risk
+  url: https://calculatedrisk.substack.com/feed
+  tier: filtered
+  topic: economics
+  paywall: substack
+  verify: true
+  notes: Newsletter; blog feed is www.calculatedriskblog.com/feeds/posts/default
+
+- name: Strength In Numbers
+  url: https://www.gelliottmorris.com/feed
+  tier: filtered
+  topic: politics-data
+  paywall: substack
+  notes: Some posts paid
+
+- name: Silver Bulletin
+  url: https://www.natesilver.net/feed
+  tier: filtered
+  topic: politics
+  paywall: substack
+  notes: Many posts paid
+
+- name: The Argument
+  url: https://www.theargumentmag.com/feed
+  tier: filtered
+  topic: politics
+  paywall: substack
+  verify: true
+
+- name: The Dispatch
+  url: https://thedispatch.com/feed/
+  tier: filtered
+  topic: politics
+  extract: page
+  verify: true
+  notes: Balance (center-right)
+
+- name: The Ringer — NBA
+  tier: filtered
+  topic: nba
+  verify: true
+  notes: Site moved platforms; no public RSS found
+
+- name: Clear Basketball Analysis
+  url: https://clearbasketballanalysis.substack.com/feed
+  tier: filtered
+  topic: nba
+  weight: 1.2
+  paywall: substack
+
+- name: Charlie's Court
+  url: https://charliescourt.substack.com/feed
+  tier: filtered
+  topic: nba
+  paywall: substack
+
+- name: Third Apron
+  url: https://www.thirdapron.com/feed
+  tier: filtered
+  topic: nba
+  paywall: substack
+  verify: true
+
+- name: The RunBack
+  url: https://therunback.substack.com/feed
+  tier: filtered
+  topic: nba
+  paywall: substack
+
+- name: America's War Game
+  url: https://americaswargame.substack.com/feed
+  tier: filtered
+  topic: cfb
+  paywall: substack
+  notes: Many posts paid
+
+- name: CFBNumbers
+  url: https://cfbnumbers.substack.com/feed
+  tier: filtered
+  topic: cfb
+  paywall: substack
+
+- name: Roll 'Bama Roll
+  url: https://www.rollbamaroll.com/rss/index.xml
+  tier: filtered
+  topic: cfb
+  extract: page
+  verify: true
+  notes: Fan blog; filter to analysis
+
+- name: NYT — Upshot
+  url: https://rss.nytimes.com/services/xml/rss/nyt/Upshot.xml
+  tier: filtered
+  topic: news
+  extract: summary
+  notes: Headlines-only per nyt_mode
+
+- name: NYT — Politics
+  url: https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml
+  tier: filtered
+  topic: news
+  extract: summary
+
+- name: NYT — Economy
+  url: https://rss.nytimes.com/services/xml/rss/nyt/Economy.xml
+  tier: filtered
+  topic: news
+  extract: summary

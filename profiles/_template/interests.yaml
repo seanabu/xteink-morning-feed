@@ -1,0 +1,5 @@
+topics:
+  example-topic:
+    keywords: [keyword one, keyword two]
+blocklist:
+  - drama phrase

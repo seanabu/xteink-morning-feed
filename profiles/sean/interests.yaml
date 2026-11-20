@@ -1,0 +1,39 @@
+topics:
+  nba:
+    keywords: [pick-and-roll, defensive scheme, spacing, on/off, lineup data, film, tactics, cap sheet, second apron]
+  cfb:
+    keywords: [SP+, scheme, offense, defense, efficiency, EPA, success rate, Alabama]
+  ai:
+    keywords: [LLM, agents, evals, open-source, open weights, inference, fine-tuning, Claude]
+  ai-builds:
+    keywords: [Show HN, open-source, built, tool, LLM, local-first]
+  ai-ds:
+    keywords: [LLM, machine learning, data, statistics, model, open-source]
+  ai-engineering:
+    keywords: [agents, evals, RAG, inference, LLM]
+  ai-ml:
+    keywords: [training, transformer, reasoning, LLM, paper]
+  statistics:
+    keywords: [causal inference, Bayesian, regression, A/B test, multilevel]
+  experimentation:
+    keywords: [A/B test, experiment, CUPED, variance reduction, causal inference]
+  data:
+    keywords: [analytics, data team, dbt, SQL, warehouse]
+  ml-ds:
+    keywords: [recommendation, evals, retrieval, machine learning]
+  economics:
+    keywords: [inflation, labor market, Fed, housing, productivity, tariffs]
+  politics:
+    keywords: [polling, elections, analysis, data]
+  politics-data:
+    keywords: [polling, elections, survey, model]
+  news:
+    keywords: [analysis, data, economy]
+    weight: 0.6
+blocklist:
+  - trade rumors
+  - beef
+  - fires back
+  - recruiting commit
+  - slams
+  - "you won't believe"

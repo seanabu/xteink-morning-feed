@@ -1,0 +1,9 @@
+# Each entry is one RSS/Atom feed.
+# Options: tier (always|filtered), topic (any string), weight, enabled, verify,
+# paywall (substack|none), extract (feed|page|summary), min_words, max_words,
+# skip_if_title_matches (list of regexes), points_min (HN-style feeds), notes.
+- name: Example Newsletter
+  url: https://example.substack.com/feed
+  tier: always
+  topic: example-topic
+  paywall: substack

@@ -1,0 +1,6 @@
+topics:
+  topic-a:
+    keywords: [alpha]
+  topic-b:
+    keywords: [beta]
+blocklist: [drama]
