@@ -52,3 +52,10 @@ def test_bad_timezone(tmp_path):
     (d / "profile.yaml").write_text("name: X\ntimezone: Mars/Olympus\n")
     with pytest.raises(ProfileError, match="timezone"):
         load_profile(d)
+
+
+def test_topic_label_falls_back_to_topic():
+    p = load_profile(FIXTURE_PROFILE)
+    assert p.topic_label("topic-a") == "Topic A"
+    assert p.topic_label("topic-b") == "topic-b"
+    assert p.topic_label("unknown") == "unknown"

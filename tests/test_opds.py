@@ -34,3 +34,13 @@ def test_flat_catalog_prefixes_dates(tmp_path):
     flat = etree.parse(str(tmp_path / "p/opds/flat.xml")).getroot()
     assert flat.findtext(f"{ATOM}entry/{ATOM}title") == "11/20 · Title 1"
     assert flat.find(f"{ATOM}entry/{ATOM}link").get("href") == "../2026-11-20/01-x.epub"
+
+
+def test_author_line_shows_source_topic_and_time(tmp_path):
+    e = _entry(1)
+    e.topic_label = "NBA"
+    write_manifest(tmp_path / "p" / "2026-11-20", [e])
+    write_catalog(tmp_path, "p", "Morning Feed", None)
+    acq = etree.parse(str(tmp_path / "p/opds/2026-11-20.xml")).getroot()
+    assert acq.findtext(f"{ATOM}entry/{ATOM}author/{ATOM}name") == "Src · NBA · 5 min"
+    assert acq.find(f"{ATOM}entry/{ATOM}category").get("term") == "t"

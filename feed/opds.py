@@ -36,10 +36,11 @@ class CatalogEntry:
     size: int
     published: Optional[str] = None  # ISO 8601
     url: str = ""
+    topic_label: str = ""
 
     @property
     def line(self) -> str:
-        return f"{self.source} · {self.topic} · {self.read_minutes} min"
+        return f"{self.source} · {self.topic_label or self.topic} · {self.read_minutes} min"
 
 
 def write_manifest(day_dir: Path, entries: list[CatalogEntry]) -> None:
@@ -105,16 +106,18 @@ def _feed(feed_id: str, title: str, self_href: str, self_type: str, start_href: 
 
 
 def _acq_entry(e: CatalogEntry, href: str, updated: str, title: Optional[str] = None) -> str:
-    summary = e.line + (f" — {e.summary}" if e.summary else "")
+    # CrossPoint shows <author><name> as the line under each title, so it carries
+    # "Source · Topic · N min". The writer's name stays in the EPUB's own metadata.
+    summary = (f"By {e.author}. " if e.author and e.author != e.source else "") + (e.summary or "")
     return (
         "  <entry>\n"
         f"    <title>{escape(title or e.title)}</title>\n"
         f"    <id>{escape(e.id)}</id>\n"
         f"    <updated>{e.published or updated}</updated>\n"
-        f"    <author><name>{escape(e.source)}</name></author>\n"
+        f"    <author><name>{escape(e.line)}</name></author>\n"
         "    <dc:language>en</dc:language>\n"
-        f"    <category term={quoteattr(e.topic)} label={quoteattr(e.topic)}/>\n"
-        f"    <summary type=\"text\">{escape(summary[:400])}</summary>\n"
+        f"    <category term={quoteattr(e.topic)} label={quoteattr(e.topic_label or e.topic)}/>\n"
+        + (f"    <summary type=\"text\">{escape(summary[:400])}</summary>\n" if summary else "") +
         f'    <link rel="http://opds-spec.org/acquisition" href={quoteattr(href)} '
         f'type="{EPUB_TYPE}" length="{e.size}"/>\n'
         "  </entry>\n"

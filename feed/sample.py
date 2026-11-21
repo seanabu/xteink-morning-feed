@@ -94,11 +94,12 @@ def build_sample(profile: Profile, n: int, out_dir: Path, base_url: Optional[str
     entries = []
     for idx, art in enumerate(articles, start=1):
         fname = article_filename(idx, art)
-        path = build_epub(art, day_dir / fname, issue)
+        label = profile.topic_label(art.item.source.topic)
+        path = build_epub(art, day_dir / fname, issue, topic_label=label)
         entries.append(CatalogEntry(
             id=f"urn:morning-feed:{profile.slug}:{day.isoformat()}:{idx:02d}",
             title=art.title, author=art.author, source=art.item.source.name,
-            topic=art.item.source.topic, read_minutes=art.read_minutes,
+            topic=art.item.source.topic, topic_label=label, read_minutes=art.read_minutes,
             summary=art.summary, file=fname, size=path.stat().st_size,
             published=art.item.published.strftime("%Y-%m-%dT%H:%M:%SZ") if art.item.published else None,
             url=art.item.url,

@@ -1,5 +1,6 @@
 topics:
   example-topic:
+    label: Example Topic   # how the topic shows on the device
     keywords: [keyword one, keyword two]
 blocklist:
   - drama phrase

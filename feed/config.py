@@ -86,6 +86,7 @@ class Source(_Strict):
 
 
 class TopicInterest(_Strict):
+    label: Optional[str] = None  # how the topic is shown on the device, e.g. "NBA"
     keywords: list[str] = Field(default_factory=list)
     weight: float = 1.0
 
@@ -105,6 +106,10 @@ class Profile(_Strict):
     @property
     def active_sources(self) -> list[Source]:
         return [s for s in self.sources if s.enabled]
+
+    def topic_label(self, topic: str) -> str:
+        t = self.interests.topics.get(topic)
+        return t.label if t and t.label else topic
 
 
 def _read_yaml(path: Path):

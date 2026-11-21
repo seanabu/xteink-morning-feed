@@ -26,7 +26,7 @@ def article_filename(index: int, article: Article) -> str:
     return f"{index:02d}-{slugify(article.item.source.name, 24)}-{slugify(article.title, 40)}.epub"
 
 
-def build_epub(article: Article, path: Path, issue_date: datetime) -> Path:
+def build_epub(article: Article, path: Path, issue_date: datetime, topic_label: str = "") -> Path:
     item = article.item
     e = html.escape
     book = epub.EpubBook()
@@ -51,7 +51,7 @@ def build_epub(article: Article, path: Path, issue_date: datetime) -> Path:
         '<div class="titlepage">'
         f"<h1>{e(article.title)}</h1>"
         f'<p class="byline">{e(article.author)}</p>'
-        f'<p class="meta">{e(item.source.name)} · {e(item.source.topic)} · {article.read_minutes} min</p>'
+        f'<p class="meta">{e(item.source.name)} · {e(topic_label or item.source.topic)} · {article.read_minutes} min</p>'
         f'<p class="meta">{pub:%B %-d, %Y}</p>'
         f'<p class="url">{e(item.url)}</p>'
         "</div>"

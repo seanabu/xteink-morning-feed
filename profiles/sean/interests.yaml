@@ -1,35 +1,60 @@
 topics:
   nba:
+    label: NBA
     keywords: [pick-and-roll, defensive scheme, spacing, on/off, lineup data, film, tactics, cap sheet, second apron]
   cfb:
+    label: CFB
     keywords: [SP+, scheme, offense, defense, efficiency, EPA, success rate, Alabama]
   ai:
+    label: AI
     keywords: [LLM, agents, evals, open-source, open weights, inference, fine-tuning, Claude]
   ai-builds:
+    label: AI builds
     keywords: [Show HN, open-source, built, tool, LLM, local-first]
   ai-ds:
+    label: AI / DS
     keywords: [LLM, machine learning, data, statistics, model, open-source]
   ai-engineering:
+    label: AI engineering
     keywords: [agents, evals, RAG, inference, LLM]
   ai-ml:
+    label: AI / ML
     keywords: [training, transformer, reasoning, LLM, paper]
   statistics:
+    label: Statistics
     keywords: [causal inference, Bayesian, regression, A/B test, multilevel]
   experimentation:
+    label: Experimentation
     keywords: [A/B test, experiment, CUPED, variance reduction, causal inference]
   data:
+    label: Data
     keywords: [analytics, data team, dbt, SQL, warehouse]
   ml-ds:
+    label: ML / DS
     keywords: [recommendation, evals, retrieval, machine learning]
   economics:
+    label: Economics
     keywords: [inflation, labor market, Fed, housing, productivity, tariffs]
   politics:
+    label: Politics
     keywords: [polling, elections, analysis, data]
   politics-data:
+    label: Politics data
     keywords: [polling, elections, survey, model]
   news:
+    label: News
     keywords: [analysis, data, economy]
     weight: 0.6
+  econ-politics:
+    label: Econ / politics
+  ds-ai:
+    label: DS / AI
+  ai-society:
+    label: AI and society
+  markets:
+    label: Markets
+  business:
+    label: Business
 blocklist:
   - trade rumors
   - beef

@@ -1,5 +1,6 @@
 topics:
   topic-a:
+    label: Topic A
     keywords: [alpha]
   topic-b:
     keywords: [beta]
