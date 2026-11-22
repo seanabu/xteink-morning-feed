@@ -9,6 +9,4 @@ min_read_minutes: 3
 fetch_window_hours: 36
 max_images: 4
 ranking: keywords        # or: llm
-whole_day_epub: true
-catalog_layout: nested   # or: flat
 nyt_mode: headlines      # or: off, full_text

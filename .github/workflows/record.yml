@@ -1,0 +1,55 @@
+# Records one event into the `state` branch. Started through the GitHub API by
+# the iPhone "Save to Morning Feed" shortcut (kind=save) and by the X3's
+# CrossPoint plugin after a reading session (kind=reading). See device/README.md.
+name: Record
+
+run-name: Record ${{ inputs.kind }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      kind: { description: "save or reading", required: true, type: choice, options: [save, reading] }
+      profile: { required: true, type: string }
+      url: { required: false, type: string }
+      title: { required: false, type: string }
+      book: { required: false, type: string }
+      start_bp: { required: false, type: string }
+      end_bp: { required: false, type: string }
+      duration: { required: false, type: string }
+      ts: { required: false, type: string }
+      event_id: { required: false, type: string }
+
+permissions:
+  contents: write
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check out state
+        run: scripts/checkout_state.sh
+
+      - name: Record
+        # Inputs go through env, never straight into the script.
+        env:
+          KIND: ${{ inputs.kind }}
+          PROFILE: ${{ inputs.profile }}
+          URL: ${{ inputs.url }}
+          TITLE: ${{ inputs.title }}
+          BOOK: ${{ inputs.book }}
+          START_BP: ${{ inputs.start_bp }}
+          END_BP: ${{ inputs.end_bp }}
+          DURATION: ${{ inputs.duration }}
+          TS: ${{ inputs.ts }}
+          EVENT_ID: ${{ inputs.event_id }}
+        run: |
+          python3 -m feed.record --state state --profile "$PROFILE" --kind "$KIND" \
+            --url "$URL" --title "$TITLE" --book "$BOOK" \
+            --start-bp "${START_BP:-0}" --end-bp "${END_BP:-0}" --duration "${DURATION:-0}" \
+            --ts "$TS" --event-id "$EVENT_ID"
+
+      - name: Save state
+        run: scripts/push_state.sh "Record ${{ inputs.kind }}"

@@ -17,3 +17,10 @@ site/
 .DS_Store
 .idea/
 .vscode/
+
+# Local state (the state branch is checked out here in CI)
+state/
+
+# Filled-in device plugin files hold a token
+device/*/token.json
+device/*/config.json

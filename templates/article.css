@@ -15,3 +15,14 @@ a { color: inherit; text-decoration: underline; }
 .titlepage .meta { font-size: 0.9em; margin: 0.3em 0; }
 .titlepage .url { font-size: 0.75em; word-break: break-all; margin-top: 2em; }
 .source-link { font-size: 0.85em; word-break: break-all; }
+/* Daily issue */
+.meta { font-size: 0.85em; margin: 0 0 1em; }
+.masthead { text-align: center; margin: 1em 0 1.2em; }
+.masthead h1 { margin-bottom: 0.2em; }
+h2.section { font-size: 1em; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid #000; margin: 1.2em 0 0.6em; }
+.toc-entry { margin: 0 0 0.9em; }
+.toc-title { font-weight: bold; margin: 0; }
+.toc-title a { text-decoration: none; }
+.toc-meta { font-size: 0.8em; margin: 0.1em 0; }
+.toc-summary { font-size: 0.9em; margin: 0.15em 0 0; }
+.back { font-size: 0.85em; margin-top: 1.5em; text-align: center; }

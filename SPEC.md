@@ -2,6 +2,15 @@
 
 Nov 20, 2026
 
+> **Revision, Nov 21 2026 (after testing on the X3).** Downloading articles one at a time
+> was too slow on the device. The catalog now holds **one EPUB per day**, titled
+> "Morning Feed - <Weekday>", with a contents page that gives each article's source, topic,
+> read time and a one-line summary. Next week's issue for a weekday replaces this week's
+> on the device. Also added: a read-later inbox fed by an iPhone share-sheet shortcut, and
+> reading-session reports from a CrossPoint plugin that tune source and topic weights. Both
+> go through the `Record` workflow into a `state` branch. Sections below that describe
+> per-article EPUBs and dated folders are superseded; see README.md and device/README.md.
+
 ## Overview
 
 A GitHub Actions job builds 12–15 clean, individually downloadable article EPUBs every morning and publishes them as an OPDS catalog on GitHub Pages, so the Xteink X3 replaces phone scrolling.

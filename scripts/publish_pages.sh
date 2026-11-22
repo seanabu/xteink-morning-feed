@@ -3,7 +3,8 @@
 # Usage: scripts/publish_pages.sh [site-dir]
 set -euo pipefail
 SITE="${1:-site}"
-REMOTE="$(git remote get-url origin)"
+# In CI, PUBLISH_REMOTE carries the token; locally the origin remote is used.
+REMOTE="${PUBLISH_REMOTE:-$(git remote get-url origin)}"
 [ -d "$SITE" ] || { echo "no $SITE folder; run build.py first" >&2; exit 1; }
 TMP="$(mktemp -d)"
 trap 'rm -rf "$TMP"' EXIT

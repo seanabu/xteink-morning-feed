@@ -31,14 +31,20 @@ class ProfileSettings(_Strict):
     catalog_title: str = "Morning Feed"
     daily_target: int = Field(14, ge=1, le=50)
     topic_cap: int = Field(5, ge=1)
+    source_cap: int = Field(2, ge=1)          # filtered articles per source per issue
     retention_days: int = Field(7, ge=1)
     min_read_minutes: float = Field(3, ge=0)
     fetch_window_hours: int = Field(36, ge=1)
     max_images: int = Field(4, ge=0)
     ranking: Literal["keywords", "llm"] = "keywords"
-    whole_day_epub: bool = True
-    catalog_layout: Literal["nested", "flat"] = "nested"
     nyt_mode: Literal["off", "headlines", "full_text"] = "headlines"
+    # Daily issue: one EPUB per day, named "<catalog_title> - <Weekday>".
+    seen_days: int = Field(30, ge=1)          # dedupe memory
+    title_similarity: float = Field(0.85, gt=0, le=1)
+    headline_cap: int = Field(6, ge=0)        # summary-only cards per issue
+    inbox_label: str = "Saved"                # section for read-later links
+    learn_from_reading: bool = True           # tune weights from reading sessions
+    learn_strength: float = Field(0.3, ge=0, le=1)  # max +/- change to a weight
 
     @field_validator("timezone")
     @classmethod

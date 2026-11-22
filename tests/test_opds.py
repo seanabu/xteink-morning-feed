@@ -1,46 +1,64 @@
+import zipfile
 from datetime import date
 
 from lxml import etree
 
-from feed.opds import CatalogEntry, write_catalog, write_manifest
+from conftest import FIXTURE_PROFILE
+from feed.config import load_profile
+from feed.issue import IssueArticle, build_issue, issue_title, one_liner
+from feed.models import Article, Item
+from feed.opds import update_index, write_catalog
 
 ATOM = "{http://www.w3.org/2005/Atom}"
 
 
-def _entry(i):
-    return CatalogEntry(id=f"urn:t:{i}", title=f"Title {i}", author="A", source="Src",
-                        topic="t", read_minutes=5, summary="s", file=f"{i:02d}-x.epub", size=100)
+def _art(profile, src_idx, title, words=900, summary=""):
+    src = profile.sources[src_idx]
+    item = Item(source=src, title=title, url=f"https://x.example.test/{title.replace(' ', '-')}", published=None)
+    body = "<p>" + " ".join(["word"] * words) + "</p>"
+    return Article(item=item, title=title, author="Writer", body_html=body, word_count=words, summary=summary)
 
 
-def test_nested_catalog(tmp_path):
-    for d in ("2026-11-19", "2026-11-20"):
-        write_manifest(tmp_path / "p" / d, [_entry(1), _entry(2)])
-    root = write_catalog(tmp_path, "p", "Morning Feed", "https://u.example.test/repo")
-    nav = etree.parse(str(root)).getroot()
-    entries = nav.findall(f"{ATOM}entry")
-    assert [e.findtext(f"{ATOM}title") for e in entries] == ["Fri Nov 20", "Thu Nov 19"]
-    href = entries[0].find(f"{ATOM}link").get("href")
-    assert href == "https://u.example.test/repo/p/opds/2026-11-20.xml"
-
-    acq = etree.parse(str(tmp_path / "p/opds/2026-11-20.xml")).getroot()
-    links = acq.findall(f"{ATOM}entry/{ATOM}link")
-    assert links[0].get("type") == "application/epub+zip"
-    assert links[0].get("href") == "https://u.example.test/repo/p/2026-11-20/01-x.epub"
+def _issue(tmp_path, day, n=3):
+    p = load_profile(FIXTURE_PROFILE)
+    items = [IssueArticle(_art(p, i % 2, f"Story {i}"), "article", "Topic A") for i in range(n)]
+    items.append(IssueArticle(_art(p, 1, "Headline one", words=40), "headline", "Topic B"))
+    path = tmp_path / "p" / "issues" / f"{day.isoformat()}-{day:%A}.epub".lower()
+    return build_issue(items, path, day, "p", "Morning Feed", "Saved")
 
 
-def test_flat_catalog_prefixes_dates(tmp_path):
-    write_manifest(tmp_path / "p" / "2026-11-20", [_entry(1)])
-    write_catalog(tmp_path, "p", "Morning Feed", None)
-    flat = etree.parse(str(tmp_path / "p/opds/flat.xml")).getroot()
-    assert flat.findtext(f"{ATOM}entry/{ATOM}title") == "11/20 · Title 1"
-    assert flat.find(f"{ATOM}entry/{ATOM}link").get("href") == "../2026-11-20/01-x.epub"
+def test_issue_record_positions_cover_the_book(tmp_path):
+    rec = _issue(tmp_path, date(2026, 11, 21))
+    assert rec["title"] == "Morning Feed - Saturday" and rec["weekday"] == "saturday"
+    arts = [a for a in rec["articles"] if a["kind"] == "article"]
+    assert arts[0]["start_bp"] > 0  # the contents page comes first
+    assert all(a["end_bp"] <= b["start_bp"] for a, b in zip(arts, arts[1:]))
+    assert rec["articles"][-1]["end_bp"] == 10000
+    names = zipfile.ZipFile(tmp_path / "p/issues" / rec["file"]).namelist()
+    assert "EPUB/contents.xhtml" in names and "EPUB/headlines.xhtml" in names
 
 
-def test_author_line_shows_source_topic_and_time(tmp_path):
-    e = _entry(1)
-    e.topic_label = "NBA"
-    write_manifest(tmp_path / "p" / "2026-11-20", [e])
-    write_catalog(tmp_path, "p", "Morning Feed", None)
-    acq = etree.parse(str(tmp_path / "p/opds/2026-11-20.xml")).getroot()
-    assert acq.findtext(f"{ATOM}entry/{ATOM}author/{ATOM}name") == "Src · NBA · 5 min"
-    assert acq.find(f"{ATOM}entry/{ATOM}category").get("term") == "t"
+def test_catalog_lists_one_issue_per_weekday(tmp_path):
+    issues = tmp_path / "p" / "issues"
+    for d in (date(2026, 11, 14), date(2026, 11, 20), date(2026, 11, 21)):
+        update_index(issues, _issue(tmp_path, d))
+    # The older Saturday was replaced by the newer one, file and all.
+    assert sorted(p.name for p in issues.glob("*.epub")) == ["2026-11-20-friday.epub", "2026-11-21-saturday.epub"]
+    root = etree.parse(str(write_catalog(tmp_path, "p", "Morning Feed"))).getroot()
+    entries = root.findall(f"{ATOM}entry")
+    assert [e.findtext(f"{ATOM}title") for e in entries] == ["Morning Feed - Saturday", "Morning Feed - Friday"]
+    assert entries[0].findtext(f"{ATOM}author/{ATOM}name").startswith("Sat Nov 21 · 3 articles · ")
+    link = entries[0].find(f"{ATOM}link")
+    assert link.get("href") == "../issues/2026-11-21-saturday.epub"
+    assert link.get("type") == "application/epub+zip"
+
+
+def test_issue_title_uses_weekday():
+    assert issue_title("Morning Feed", date(2026, 11, 23)) == "Morning Feed - Monday"
+
+
+def test_one_liner_skips_link_boilerplate():
+    p = load_profile(FIXTURE_PROFILE)
+    a = _art(p, 0, "A long enough title here", summary="Article URL: https://a Comments URL: https://b Points: 9")
+    a.body_html = "<p>The model is small. It runs on a laptop and beats last year's large model.</p>"
+    assert one_liner(a) == "The model is small. It runs on a laptop and beats last year's large model."

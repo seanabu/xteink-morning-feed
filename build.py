@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Entry point: python build.py --profile <name> [--check | --sample N]."""
+"""Entry point: python build.py --profile <name> [--check | --daily]."""
 
 from __future__ import annotations
 
@@ -19,12 +19,10 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--profiles-dir", default=str(ROOT / "profiles"))
     mode = p.add_mutually_exclusive_group()
     mode.add_argument("--check", action="store_true", help="validate config and test every feed")
-    mode.add_argument("--sample", type=int, metavar="N",
-                      help="build a sample catalog with N articles (milestone 2)")
+    mode.add_argument("--daily", action="store_true", help="build today's issue and catalog")
     p.add_argument("--out", default=str(ROOT / "site"), help="output folder for the static site")
-    p.add_argument("--base-url", default=None,
-                   help="public URL of the site root, e.g. https://user.github.io/repo "
-                        "(makes OPDS links absolute)")
+    p.add_argument("--state", default=str(ROOT / "state"),
+                   help="state folder (dedupe, inbox, reading history); the state branch in CI")
     p.add_argument("-v", "--verbose", action="store_true")
     args = p.parse_args(argv)
 
@@ -42,12 +40,11 @@ def main(argv: list[str] | None = None) -> int:
         failures = run_check(profile)
         return 0 if failures == 0 else 2
 
-    if args.sample:
-        from feed.sample import build_sample
-        build_sample(profile, n=args.sample, out_dir=Path(args.out), base_url=args.base_url)
-        return 0
+    if args.daily:
+        from feed.daily import build_daily
+        return build_daily(profile, out_dir=Path(args.out), state_dir=Path(args.state))
 
-    print("Full daily pipeline arrives in milestone 3. Use --check or --sample N.", file=sys.stderr)
+    p.print_help(sys.stderr)
     return 1
 
 

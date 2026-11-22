@@ -1,0 +1,56 @@
+name: Daily issue
+
+on:
+  schedule:
+    # 11:00 UTC = 4am Pacific in summer, 3am in winter. GitHub may start it late.
+    - cron: "0 11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-issue
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+
+      - name: Install
+        run: uv sync --frozen
+
+      - name: Tests
+        run: uv run pytest -q
+
+      - name: Check out state and the published site
+        run: |
+          scripts/checkout_state.sh
+          mkdir -p site
+          if git fetch -q origin gh-pages; then git archive FETCH_HEAD | tar -x -C site; fi
+
+      - name: Build every profile
+        run: |
+          status=0
+          for dir in profiles/*/; do
+            name="$(basename "$dir")"
+            [ "$name" = "_template" ] && continue
+            echo "::group::$name"
+            uv run python build.py --profile "$name" --daily || status=1
+            echo "::endgroup::"
+          done
+          exit $status
+
+      - name: Save state
+        if: always()
+        run: scripts/push_state.sh "Daily issue $(date -u +%F)"
+
+      - name: Publish to GitHub Pages
+        env:
+          PUBLISH_REMOTE: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+        run: scripts/publish_pages.sh site

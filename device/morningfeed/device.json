@@ -1,0 +1,22 @@
+{
+  "title": "Morning Feed",
+  "description": "Reports reading sessions so the daily issue learns what you read.",
+  "token": { "file": "token.json", "path": "token" },
+  "config": { "file": "config.json" },
+  "events": {
+    "reader.session": {
+      "connect": true,
+      "request": {
+        "method": "POST",
+        "url": "https://api.github.com/repos/{cfg.repo}/actions/workflows/record.yml/dispatches",
+        "headers": {
+          "Authorization": "Bearer {token}",
+          "Accept": "application/vnd.github+json",
+          "Content-Type": "application/json",
+          "User-Agent": "crosspoint-morning-feed"
+        },
+        "body": "{\"ref\":\"main\",\"inputs\":{\"kind\":\"reading\",\"profile\":\"{cfg.profile}\",\"book\":\"{event.book}\",\"start_bp\":\"{event.start_progress_bp}\",\"end_bp\":\"{event.end_progress_bp}\",\"duration\":\"{event.duration_seconds}\",\"ts\":\"{event.start_time}\",\"event_id\":\"{event.id}\"}}"
+      }
+    }
+  }
+}
