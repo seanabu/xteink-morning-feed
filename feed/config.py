@@ -59,6 +59,8 @@ class ProfileSettings(_Strict):
 class Source(_Strict):
     name: str
     url: Optional[str] = None
+    # Tried in order when `url` fails (blocked, down). Same items, different host.
+    fallback_urls: list[str] = Field(default_factory=list)
     tier: Literal["always", "filtered"]
     topic: str
     weight: float = 1.0

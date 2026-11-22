@@ -54,6 +54,7 @@
 # ---------- Filtered pool ----------
 - name: Hacker News — Show HN
   url: https://hnrss.org/show?points=100
+  fallback_urls: [https://news.ycombinator.com/showrss]   # official feed, no vote counts
   tier: filtered
   topic: ai-builds
   extract: page
@@ -62,6 +63,7 @@
 
 - name: Hacker News — front page
   url: https://hnrss.org/frontpage?points=150
+  fallback_urls: [https://news.ycombinator.com/rss]       # official front page
   tier: filtered
   topic: ai-ds
   extract: page

@@ -80,23 +80,31 @@ def parse_entries(source: Source, parsed) -> list[Item]:
 
 
 def fetch_source(source: Source) -> FeedResult:
-    """Fetch one feed. Never raises: errors are reported on the result."""
+    """Fetch one feed, trying fallback URLs in order. Never raises: errors are
+    reported on the result."""
     result = FeedResult(source=source)
-    if not source.url:
+    urls = [u for u in [source.url, *source.fallback_urls] if u]
+    if not urls:
         result.error = "no feed URL configured"
         return result
-    try:
-        resp = http.get(source.url)
-    except Exception as e:  # noqa: BLE001 - fail soft on any network error
-        result.error = f"fetch failed: {e}"
+    errors = []
+    for url in urls:
+        try:
+            resp = http.get(url)
+        except Exception as e:  # noqa: BLE001 - fail soft on any network error
+            errors.append(f"{url}: {e}")
+            continue
+        parsed = feedparser.parse(resp.content)
+        if parsed.bozo and not parsed.entries:
+            errors.append(f"{url}: not a feed: {parsed.get('bozo_exception', 'parse error')}")
+            continue
+        result.final_url = resp.url
+        result.feed_title = parsed.feed.get("title")
+        result.items = parse_entries(source, parsed)
+        if url != source.url:
+            log.info("%s: used fallback %s", source.name, url)
+        if not result.items:
+            result.error = "feed has 0 items"
         return result
-    result.final_url = resp.url
-    parsed = feedparser.parse(resp.content)
-    if parsed.bozo and not parsed.entries:
-        result.error = f"not a feed: {parsed.get('bozo_exception', 'parse error')}"
-        return result
-    result.feed_title = parsed.feed.get("title")
-    result.items = parse_entries(source, parsed)
-    if not result.items:
-        result.error = "feed has 0 items"
+    result.error = "fetch failed: " + " | ".join(errors)
     return result
