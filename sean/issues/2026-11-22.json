@@ -1,0 +1,99 @@
+{
+  "articles": [
+    {
+      "end_bp": 7641,
+      "kind": "article",
+      "read_minutes": 24,
+      "source": "Latent Space",
+      "start_bp": 192,
+      "title": "[AINews] Riemann Hypothesis proved...twice independently",
+      "topic": "ai-engineering",
+      "url": "https://latent.space/p/ainews-riemann-hypothesis-proved-twice-independently/",
+      "words": 5464
+    },
+    {
+      "end_bp": 9109,
+      "kind": "article",
+      "read_minutes": 6,
+      "source": "The Dispatch",
+      "start_bp": 7641,
+      "title": "Our Best Stuff on the Spate of Tech Outages",
+      "topic": "politics",
+      "url": "https://thedispatch.com/newsletter/weekly/tech-outages-microsoft-air-traffic-cyberattack/",
+      "words": 1388
+    },
+    {
+      "end_bp": 9726,
+      "kind": "article",
+      "read_minutes": 3,
+      "source": "Marginal Revolution",
+      "start_bp": 9109,
+      "title": "Will AI Growth Reach the Developing World?",
+      "topic": "economics",
+      "url": "https://marginalrevolution.com/marginalrevolution/2026/11/will-ai-growth-reach-the-developing-world.html?utm_source=rss&utm_medium=rss&utm_campaign=will-ai-growth-reach-the-developing-world",
+      "words": 636
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Politics",
+      "start_bp": 9726,
+      "title": "Fact-Checking Stephen Miller, the New White House Chief of Staff",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/22/us/politics/stephen-miller-fact-check.html",
+      "words": 25
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Politics",
+      "start_bp": 9726,
+      "title": "Is Annie Andrews Too Real for the Senate? South Carolinians Are About to Find Out.",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/22/us/politics/annie-andrews-south-carolina-senate.html",
+      "words": 31
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Politics",
+      "start_bp": 9726,
+      "title": "Republicans Debate Why They Lost the Midterms, and if Trump Is to Blame",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/22/us/politics/republican-midterm-loss-debate-trump.html",
+      "words": 28
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Politics",
+      "start_bp": 9726,
+      "title": "Deadly Protests Erupt in Bangladesh Over Exiled Former Leader. What to Know.",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/21/world/asia/bangladesh-protests-sheikh-hasina-what-to-know.html",
+      "words": 29
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Politics",
+      "start_bp": 9726,
+      "title": "Judge Blocks Trump Administration’s Effort to Transform Homelessness Policy",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/21/us/politics/judge-trump-homeless-aid-addiction-treatment.html",
+      "words": 35
+    }
+  ],
+  "date": "2026-11-22",
+  "file": "2026-11-22-sunday.epub",
+  "read_minutes": 33,
+  "sha1": "4b840c2ca185fef2498f43f17f6c88542d368da0",
+  "size": 194425,
+  "title": "Morning Feed - Sunday",
+  "weekday": "sunday"
+}
