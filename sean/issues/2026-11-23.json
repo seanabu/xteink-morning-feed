@@ -1,0 +1,154 @@
+{
+  "articles": [
+    {
+      "end_bp": 1468,
+      "kind": "article",
+      "read_minutes": 6,
+      "source": "Hacker News — Show HN",
+      "start_bp": 306,
+      "title": "Show HN: I built a game where you are an LLM's subagent",
+      "topic": "ai-builds",
+      "url": "https://github.com/gulivan/worker755",
+      "words": 1326
+    },
+    {
+      "end_bp": 2298,
+      "kind": "article",
+      "read_minutes": 4,
+      "source": "Hacker News — front page",
+      "start_bp": 1468,
+      "title": "Nvidia Reinstates Jensen Huang as CEO",
+      "topic": "ai-ds",
+      "url": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html",
+      "words": 970
+    },
+    {
+      "end_bp": 3257,
+      "kind": "article",
+      "read_minutes": 6,
+      "source": "Roll 'Bama Roll",
+      "start_bp": 2298,
+      "title": "Jumbo Package: Plenty on the line for Alabama vs Auburn",
+      "topic": "cfb",
+      "url": "https://www.rollbamaroll.com/alabama-crimson-tide-football/86933/alabama-football-auburn-iron-bowl-its-that-time-of-year-again",
+      "words": 1377
+    },
+    {
+      "end_bp": 4521,
+      "kind": "article",
+      "read_minutes": 6,
+      "source": "Hacker News — front page",
+      "start_bp": 3257,
+      "title": "XNU Linux: Full OS X GUI Userspace on Linux",
+      "topic": "ai-ds",
+      "url": "https://github.com/AFK-surf/xnulinux",
+      "words": 1359
+    },
+    {
+      "end_bp": 5485,
+      "kind": "article",
+      "read_minutes": 4,
+      "source": "Simon Willison",
+      "start_bp": 4521,
+      "title": "Ladybird's first alpha release",
+      "topic": "ai",
+      "url": "https://simonwillison.net/2026/Nov/23/ladybird/",
+      "words": 876
+    },
+    {
+      "end_bp": 6088,
+      "kind": "article",
+      "read_minutes": 4,
+      "source": "Roll 'Bama Roll",
+      "start_bp": 5485,
+      "title": "Alabama Crimson Tide vs Auburn Tigers Opening Odds: Cover or Not?",
+      "topic": "cfb",
+      "url": "https://www.rollbamaroll.com/alabama-crimson-tide-football/86886/alabama-crimson-tide-vs-auburn-tigers-opening-odds-cover-or-not",
+      "words": 933
+    },
+    {
+      "end_bp": 8225,
+      "kind": "article",
+      "read_minutes": 16,
+      "source": "Statistical Modeling",
+      "start_bp": 6088,
+      "title": "A statistician with Tourette’s syndrome",
+      "topic": "statistics",
+      "url": "https://statmodeling.stat.columbia.edu/2026/11/23/a-statistician-with-tourettes-syndrome/",
+      "words": 3624
+    },
+    {
+      "end_bp": 9803,
+      "kind": "article",
+      "read_minutes": 8,
+      "source": "The Argument",
+      "start_bp": 8225,
+      "title": "Say goodbye to anonymous posting",
+      "topic": "politics",
+      "url": "https://www.theargumentmag.com/p/say-goodbye-to-anonymous-posting",
+      "words": 1931
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Upshot",
+      "start_bp": 9803,
+      "title": "CVS Health’s Planned Breakup Hasn’t Quieted Antitrust Critics",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/23/business/cvs-pharmacy-health-federal-investigations-antitrust.html",
+      "words": 22
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Politics",
+      "start_bp": 9803,
+      "title": "Trump Administration Imposes Sanctions on Megaspeed, Singaporean Firm at Center of Nvidia Scandal",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/23/technology/trump-administration-megaspeed-trade-blacklist-nvidia.html",
+      "words": 25
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Politics",
+      "start_bp": 9803,
+      "title": "Rep. Jimmy Gomez Resigns After Panel Alleges Unwanted Sexual Contact With Aide",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/23/us/politics/jimmy-gomez-democrat-resigns.html",
+      "words": 31
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Politics",
+      "start_bp": 9803,
+      "title": "Turning the Lens Around: Bob Woodward Takes On Bob Woodward",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/23/us/politics/bob-woodward-book-secrets.html",
+      "words": 32
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Politics",
+      "start_bp": 9803,
+      "title": "Fake Personas Aligned With China Are Targeting Taiwan’s Election, Researchers Say",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/23/us/politics/taiwan-elections-misinformation.html",
+      "words": 27
+    }
+  ],
+  "date": "2026-11-23",
+  "file": "2026-11-23-monday.epub",
+  "read_minutes": 54,
+  "sha1": "525ec9a9d8be752d494ff23a6a4491e6ff456aba",
+  "size": 327133,
+  "title": "Morning Feed - Monday",
+  "weekday": "monday"
+}
