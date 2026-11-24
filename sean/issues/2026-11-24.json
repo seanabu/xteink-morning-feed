@@ -1,0 +1,143 @@
+{
+  "articles": [
+    {
+      "end_bp": 706,
+      "kind": "article",
+      "read_minutes": 4,
+      "source": "Hacker News — front page",
+      "start_bp": 218,
+      "title": "LLM agents work for their parent companies, not for you",
+      "topic": "ai-ds",
+      "url": "https://michaelharley.net/posts/2026/11/01/llm-agents-work-for-their-parent-companies-not-for-you/",
+      "words": 1002
+    },
+    {
+      "end_bp": 1220,
+      "kind": "article",
+      "read_minutes": 3,
+      "source": "Hacker News — front page",
+      "start_bp": 706,
+      "title": "2035 came early",
+      "topic": "ai-ds",
+      "url": "https://fzakaria.com/2026/11/23/2035-came-early",
+      "words": 602
+    },
+    {
+      "end_bp": 1651,
+      "kind": "article",
+      "read_minutes": 4,
+      "source": "Roll 'Bama Roll",
+      "start_bp": 1220,
+      "title": "Alabama Basketball vs Baylor: 3 Keys, How to Watch",
+      "topic": "cfb",
+      "url": "https://www.rollbamaroll.com/alabama-crimson-tide-basketball/87036/alabama-basketball-vs-baylor-3-keys-how-to-watch",
+      "words": 828
+    },
+    {
+      "end_bp": 2486,
+      "kind": "article",
+      "read_minutes": 7,
+      "source": "Roll 'Bama Roll",
+      "start_bp": 1651,
+      "title": "Jumbo Package: LSU is getting VERY close to pushing things too far",
+      "topic": "cfb",
+      "url": "https://www.rollbamaroll.com/jumbo-package/87034/jumbo-package-lsu-is-getting-very-close-to-pushing-things-too-far",
+      "words": 1688
+    },
+    {
+      "end_bp": 7346,
+      "kind": "article",
+      "read_minutes": 27,
+      "source": "Latent Space",
+      "start_bp": 2486,
+      "title": "[AINews] Jensen Is Back! and OpenAI Shows Its Pretraining Curve, joined by Microsoft",
+      "topic": "ai-engineering",
+      "url": "https://latent.space/p/ainews-jensen-is-back-and-openai-shows-its-pretraining-curve-joined-by-microsoft/",
+      "words": 6242
+    },
+    {
+      "end_bp": 7951,
+      "kind": "article",
+      "read_minutes": 4,
+      "source": "Statistical Modeling",
+      "start_bp": 7346,
+      "title": "WAR and the benefits of political moderation:  Difficulties in measurement lead to challenges of inference",
+      "topic": "statistics",
+      "url": "https://statmodeling.stat.columbia.edu/2026/11/24/war-and-the-benefits-of-political-moderation-difficulties-in-measurement-lead-to-challenges-of-inference/",
+      "words": 1024
+    },
+    {
+      "end_bp": 9862,
+      "kind": "article",
+      "read_minutes": 14,
+      "source": "Noahpinion",
+      "start_bp": 7951,
+      "title": "Why the New Right is failing",
+      "topic": "economics",
+      "url": "https://www.noahpinion.blog/p/why-the-new-right-is-failing",
+      "words": 3255
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Upshot",
+      "start_bp": 9862,
+      "title": "Medicare Hospice Caps Leave Patients Without Care",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/24/business/medicare-hospice-caps-patients-lose-care.html",
+      "words": 21
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Politics",
+      "start_bp": 9862,
+      "title": "‘Melania: The Series’ is a Bloodless, Instantly Dated Travelogue of Power",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/24/arts/television/melania-the-series-review.html",
+      "words": 24
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Politics",
+      "start_bp": 9862,
+      "title": "Top Aviation Officials Were Traveling When F.A.A.’s Nationwide Ground Stop Halted Flights",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/24/business/l3harris-ground-stop-aviation.html",
+      "words": 36
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Politics",
+      "start_bp": 9862,
+      "title": "No. 2 Official at F.B.I. Is Said to Be Retiring Before End of Year",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/23/us/politics/fbi-raia-retiring.html",
+      "words": 23
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Politics",
+      "start_bp": 9862,
+      "title": "How a Scientist Behind the Mediterranean Diet Got Caught in Trump’s War on Harvard",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/23/us/politics/walter-willett-trump-harvard.html",
+      "words": 28
+    }
+  ],
+  "date": "2026-11-24",
+  "file": "2026-11-24-tuesday.epub",
+  "read_minutes": 63,
+  "sha1": "193d9bdaed6db7fdc24aabb3bbc9cc7b5a62c219",
+  "size": 268087,
+  "title": "Morning Feed - Tuesday",
+  "weekday": "tuesday"
+}
