@@ -7,7 +7,10 @@ Layout under <out>/<profile>/:
 
 One entry per weekday: "Morning Feed - Saturday". On the X3 the file name comes
 from the title, so next week's Saturday issue replaces this one on the device.
-Links are relative, so the site works from any host or path.
+Links are absolute when a base URL is given (the published site). CrossPoint
+does not resolve relative links the RFC way: it appends them to the feed URL
+itself (".../opds/root.xml/../issues/x.epub"), which 404s. Without a base URL
+(local previews) links fall back to relative.
 """
 
 from __future__ import annotations
@@ -60,7 +63,11 @@ def update_index(issues_dir: Path, record: dict, keep: int = 7) -> list[dict]:
     return kept
 
 
-def _entry(rec: dict, slug: str, updated: str) -> str:
+def _href(base_url: Optional[str], slug: str, path: str, fallback: str) -> str:
+    return f"{base_url.rstrip('/')}/{slug}/{path}" if base_url else fallback
+
+
+def _entry(rec: dict, slug: str, updated: str, base_url: Optional[str] = None) -> str:
     readable = [a for a in rec["articles"] if a["kind"] != "headline"]
     summary = " · ".join(a["title"] for a in readable)[:400]
     return (
@@ -72,13 +79,14 @@ def _entry(rec: dict, slug: str, updated: str) -> str:
         "    <dc:language>en</dc:language>\n"
         f"    <dc:issued>{rec['date']}</dc:issued>\n"
         + (f'    <summary type="text">{escape(summary)}</summary>\n' if summary else "") +
-        f'    <link rel="http://opds-spec.org/acquisition" href={quoteattr("../issues/" + rec["file"])} '
+        f'    <link rel="http://opds-spec.org/acquisition" href={quoteattr(_href(base_url, slug, "issues/" + rec["file"], "../issues/" + rec["file"]))} '
         f'type="{EPUB_TYPE}" length="{rec["size"]}"/>\n'
         "  </entry>\n"
     )
 
 
-def write_catalog(out_dir: Path, slug: str, title: str, now: Optional[datetime] = None) -> Path:
+def write_catalog(out_dir: Path, slug: str, title: str, now: Optional[datetime] = None,
+                  base_url: Optional[str] = None) -> Path:
     """Regenerate root.xml from the issues index."""
     profile_dir = out_dir / slug
     opds_dir = profile_dir / "opds"
@@ -86,6 +94,7 @@ def write_catalog(out_dir: Path, slug: str, title: str, now: Optional[datetime] 
     updated = (now or datetime.now(timezone.utc)).strftime("%Y-%m-%dT%H:%M:%SZ")
     issues = read_index(profile_dir / "issues")
     root = opds_dir / "root.xml"
+    self_href = quoteattr(_href(base_url, slug, "opds/root.xml", "root.xml"))
     root.write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" '
@@ -94,9 +103,9 @@ def write_catalog(out_dir: Path, slug: str, title: str, now: Optional[datetime] 
         f"  <title>{escape(title)}</title>\n"
         f"  <updated>{updated}</updated>\n"
         "  <author><name>Morning Feed</name></author>\n"
-        f'  <link rel="self" href="root.xml" type="{ACQ_TYPE}"/>\n'
-        f'  <link rel="start" href="root.xml" type="{ACQ_TYPE}"/>\n'
-        + "".join(_entry(r, slug, updated) for r in issues)
+        f'  <link rel="self" href={self_href} type="{ACQ_TYPE}"/>\n'
+        f'  <link rel="start" href={self_href} type="{ACQ_TYPE}"/>\n'
+        + "".join(_entry(r, slug, updated, base_url) for r in issues)
         + "</feed>\n",
         encoding="utf-8",
     )

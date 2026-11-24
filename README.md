@@ -49,9 +49,14 @@ uv run pytest
 
 ## Daily job
 
-`.github/workflows/daily.yml` runs at 11:00 UTC (4am Pacific in summer, 3am in winter)
-and on demand (Actions → Daily issue → Run workflow). It checks out the `state` branch
-and the current `gh-pages` site, builds every profile, pushes state, and republishes.
+`.github/workflows/daily.yml` is scheduled at several times between 10:23 and 15:23 UTC,
+because GitHub often starts scheduled runs hours late or drops them. The first run that
+happens builds the day's issue and the later ones skip (`--if-missing`). Running it by
+hand (Actions → Daily issue → Run workflow) always rebuilds. It checks out the `state`
+branch and the current `gh-pages` site, builds every profile, pushes state, and republishes.
+
+Catalog links are absolute (`--base-url`, or `SITE_URL`; CI reads it from the Pages
+settings). CrossPoint appends relative links to the feed URL as-is, so they 404.
 
 `.github/workflows/record.yml` takes one event at a time (a saved link from the phone, or
 a reading session from the X3) and writes it to the `state` branch.

@@ -127,11 +127,20 @@ def _clean_site(profile_dir: Path) -> None:
             p.unlink()
 
 
-def build_daily(profile: Profile, out_dir: Path, state_dir: Path, now: Optional[datetime] = None) -> int:
+def build_daily(profile: Profile, out_dir: Path, state_dir: Path, now: Optional[datetime] = None,
+                base_url: Optional[str] = None, force: bool = True) -> int:
+    """Build today's issue. With force=False, a day that already has an issue is
+    left alone (the schedule fires several times so a late or dropped run is covered)."""
     s = profile.settings
     now = now or datetime.now(timezone.utc)
     day = now.astimezone(ZoneInfo(s.timezone)).date()
     state = State(state_dir, profile.slug)
+
+    if not force and day in state.issues():
+        log.info("%s already has an issue for %s; skipping", profile.slug, day)
+        if base_url:  # still refresh the catalog, so link fixes reach the site
+            write_catalog(out_dir, profile.slug, s.catalog_title, now, base_url)
+        return 0
 
     # A re-run on the same day rebuilds from the same pool of articles.
     previous = state.issues().get(day)
@@ -185,7 +194,7 @@ def build_daily(profile: Profile, out_dir: Path, state_dir: Path, now: Optional[
     record = build_issue(issue_items, epub_path, day, profile.slug, s.catalog_title, s.inbox_label)
     update_index(issues_dir, record)
     (out_dir / ".nojekyll").touch()
-    root = write_catalog(out_dir, profile.slug, s.catalog_title, now)
+    root = write_catalog(out_dir, profile.slug, s.catalog_title, now, base_url)
 
     # State: remember what was used, consume the inbox, prune old history.
     for a in record["articles"]:

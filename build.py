@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import logging
+import os
 import sys
 from pathlib import Path
 
@@ -23,6 +24,10 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--out", default=str(ROOT / "site"), help="output folder for the static site")
     p.add_argument("--state", default=str(ROOT / "state"),
                    help="state folder (dedupe, inbox, reading history); the state branch in CI")
+    p.add_argument("--base-url", default=os.environ.get("SITE_URL"),
+                   help="public URL of the site root (catalog links must be absolute for CrossPoint)")
+    p.add_argument("--if-missing", action="store_true",
+                   help="skip a profile that already has today's issue (used by the schedule)")
     p.add_argument("-v", "--verbose", action="store_true")
     args = p.parse_args(argv)
 
@@ -42,7 +47,8 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.daily:
         from feed.daily import build_daily
-        return build_daily(profile, out_dir=Path(args.out), state_dir=Path(args.state))
+        return build_daily(profile, out_dir=Path(args.out), state_dir=Path(args.state),
+                           base_url=args.base_url, force=not args.if_missing)
 
     p.print_help(sys.stderr)
     return 1

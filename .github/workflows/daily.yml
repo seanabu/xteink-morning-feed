@@ -2,12 +2,20 @@ name: Daily issue
 
 on:
   schedule:
-    # 11:00 UTC = 4am Pacific in summer, 3am in winter. GitHub may start it late.
-    - cron: "0 11 * * *"
+    # GitHub starts scheduled runs late (hours, sometimes) or drops them, so
+    # several slots are listed; the first one that runs builds the day's issue
+    # and the rest skip (--if-missing). Off-the-hour minutes are less congested.
+    # 10:23 UTC = 2:23am Pacific in winter.
+    - cron: "23 10 * * *"
+    - cron: "23 11 * * *"
+    - cron: "23 12 * * *"
+    - cron: "23 13 * * *"
+    - cron: "23 15 * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
+  pages: read
 
 concurrency:
   group: daily-issue
@@ -34,14 +42,28 @@ jobs:
           mkdir -p site
           if git fetch -q origin gh-pages; then git archive FETCH_HEAD | tar -x -C site; fi
 
+      - name: Find the site URL
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # CrossPoint needs absolute links in the catalog. Use the Pages URL
+          # (custom domain included), always over https.
+          url="$(gh api "repos/${{ github.repository }}/pages" --jq .html_url 2>/dev/null || true)"
+          [ -n "$url" ] || url="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+          url="${url/#http:\/\//https://}"
+          echo "SITE_URL=$url" >> "$GITHUB_ENV"
+          echo "Site URL: $url"
+
       - name: Build every profile
         run: |
+          flags=""
+          [ "${{ github.event_name }}" = "schedule" ] && flags="--if-missing"
           status=0
           for dir in profiles/*/; do
             name="$(basename "$dir")"
             [ "$name" = "_template" ] && continue
             echo "::group::$name"
-            uv run python build.py --profile "$name" --daily || status=1
+            uv run python build.py --profile "$name" --daily $flags || status=1
             echo "::endgroup::"
           done
           exit $status

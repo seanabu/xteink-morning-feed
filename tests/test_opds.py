@@ -53,6 +53,16 @@ def test_catalog_lists_one_issue_per_weekday(tmp_path):
     assert link.get("type") == "application/epub+zip"
 
 
+def test_catalog_links_are_absolute_with_a_base_url(tmp_path):
+    # CrossPoint appends a relative href to the feed URL itself
+    # (".../opds/root.xml/../issues/x.epub"), so the published catalog must be absolute.
+    update_index(tmp_path / "p" / "issues", _issue(tmp_path, date(2026, 11, 21)))
+    root = etree.parse(str(write_catalog(tmp_path, "p", "Morning Feed", base_url="https://h.example/repo/"))).getroot()
+    link = root.find(f"{ATOM}entry/{ATOM}link")
+    assert link.get("href") == "https://h.example/repo/p/issues/2026-11-21-saturday.epub"
+    assert root.find(f"{ATOM}link").get("href") == "https://h.example/repo/p/opds/root.xml"
+
+
 def test_issue_title_uses_weekday():
     assert issue_title("Morning Feed", date(2026, 11, 23)) == "Morning Feed - Monday"
 
