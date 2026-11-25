@@ -1,0 +1,187 @@
+{
+  "articles": [
+    {
+      "end_bp": 1202,
+      "kind": "article",
+      "read_minutes": 9,
+      "source": "Worse on Purpose",
+      "start_bp": 246,
+      "title": "On Simple Machines: A motorcycle as my guide",
+      "topic": "business",
+      "url": "https://www.worseonpurpose.com/p/on-simple-machines-suzuki-dr650",
+      "words": 2183
+    },
+    {
+      "end_bp": 1863,
+      "kind": "article",
+      "read_minutes": 6,
+      "source": "Simon Willison",
+      "start_bp": 1202,
+      "title": "Three LLM inflection points in twelve months",
+      "topic": "ai",
+      "url": "https://simonwillison.net/2026/Nov/24/llm-inflection-points/",
+      "words": 1278
+    },
+    {
+      "end_bp": 2260,
+      "kind": "article",
+      "read_minutes": 5,
+      "source": "Roll 'Bama Roll",
+      "start_bp": 1863,
+      "title": "Alabama Falls To Baylor 68-63",
+      "topic": "cfb",
+      "url": "https://www.rollbamaroll.com/alabama-crimson-tide-basketball/87074/alabama-falls-to-baylor-68-63",
+      "words": 1071
+    },
+    {
+      "end_bp": 2647,
+      "kind": "article",
+      "read_minutes": 3,
+      "source": "Hacker News — front page",
+      "start_bp": 2260,
+      "title": "1Password Security Incident",
+      "topic": "ai-ds",
+      "url": "https://1password.com/blog/update-on-nov-2026-security-incident",
+      "words": 712
+    },
+    {
+      "end_bp": 2946,
+      "kind": "article",
+      "read_minutes": 3,
+      "source": "Hacker News — front page",
+      "start_bp": 2647,
+      "title": "Ternary Bonsai 2.5 27B",
+      "topic": "ai-ds",
+      "url": "https://prismml.com/news/bonsai-2-5-27b",
+      "words": 589
+    },
+    {
+      "end_bp": 3321,
+      "kind": "article",
+      "read_minutes": 4,
+      "source": "Roll 'Bama Roll",
+      "start_bp": 2946,
+      "title": "Jumbo Package: Alabama players speak on Iron Bowl significance",
+      "topic": "cfb",
+      "url": "https://www.rollbamaroll.com/alabama-crimson-tide-football/87087/alabama-football-players-speak-on-iron-bowl-significance",
+      "words": 858
+    },
+    {
+      "end_bp": 6727,
+      "kind": "article",
+      "read_minutes": 24,
+      "source": "Latent Space",
+      "start_bp": 3321,
+      "title": "[AINews] Gemini 4 Neon marks GDM's full return as a Frontier Lab",
+      "topic": "ai-engineering",
+      "url": "https://latent.space/p/ainews-gemini-4-neon-marks-gdm-s-full-return-as-a-frontier-lab/",
+      "words": 5428
+    },
+    {
+      "end_bp": 7017,
+      "kind": "article",
+      "read_minutes": 3,
+      "source": "Statistical Modeling",
+      "start_bp": 6727,
+      "title": "Substitution Solver",
+      "topic": "statistics",
+      "url": "https://statmodeling.stat.columbia.edu/2026/11/25/substitution-solver/",
+      "words": 580
+    },
+    {
+      "end_bp": 8152,
+      "kind": "article",
+      "read_minutes": 9,
+      "source": "Noahpinion",
+      "start_bp": 7017,
+      "title": "How to make Thanksgiving even better",
+      "topic": "economics",
+      "url": "https://www.noahpinion.blog/p/how-to-make-thanksgiving-even-better",
+      "words": 2091
+    },
+    {
+      "end_bp": 8695,
+      "kind": "article",
+      "read_minutes": 5,
+      "source": "The Dispatch",
+      "start_bp": 8152,
+      "title": "USMCA, Trade, and the Character Issue",
+      "topic": "politics",
+      "url": "https://thedispatch.com/newsletter/dispatch-markets/trade-agreements-usmca/",
+      "words": 1239
+    },
+    {
+      "end_bp": 9895,
+      "kind": "article",
+      "read_minutes": 10,
+      "source": "Silver Bulletin",
+      "start_bp": 8695,
+      "title": "AI is moving way too fast",
+      "topic": "politics",
+      "url": "https://www.natesilver.net/p/ai-is-moving-way-too-fast",
+      "words": 2371
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Upshot",
+      "start_bp": 9895,
+      "title": "‘My Duty as a Grandson’: Gen Z Men Are as Likely as Women to Provide Elder Care",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/25/upshot/gen-z-elder-care.html",
+      "words": 16
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Upshot",
+      "start_bp": 9895,
+      "title": "Trapped on the Tarmac: 3-Hour Flight Delays Spike Under Trump",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/25/upshot/tarmac-delays-flights-trump.html",
+      "words": 22
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Politics",
+      "start_bp": 9895,
+      "title": "Sept. 11 Defendants Get New Opening to Challenge Death Penalty",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/25/us/politics/death-penalty-sept-11-case-guantanamo.html",
+      "words": 31
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Politics",
+      "start_bp": 9895,
+      "title": "Lukoil to Sell Foreign Assets, but Not to Kushner and Witkoff Associates",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/25/us/politics/lukoil-deal.html",
+      "words": 35
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Politics",
+      "start_bp": 9895,
+      "title": "C.I.A. Waterboarded More Detainees Than It Admitted, F.B.I. Interview Suggests",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/25/us/politics/cia-waterboarding.html",
+      "words": 32
+    }
+  ],
+  "date": "2026-11-25",
+  "file": "2026-11-25-wednesday.epub",
+  "read_minutes": 81,
+  "sha1": "84858fca8a80f446e6503b6513c12ec9dc52911d",
+  "size": 481266,
+  "title": "Morning Feed - Wednesday",
+  "weekday": "wednesday"
+}
