@@ -1,0 +1,154 @@
+{
+  "articles": [
+    {
+      "end_bp": 583,
+      "kind": "article",
+      "read_minutes": 3,
+      "source": "Roll 'Bama Roll",
+      "start_bp": 250,
+      "title": "Alabama Football 2026 vs. Auburn: Previewing the Tiger Offense",
+      "topic": "cfb",
+      "url": "https://www.rollbamaroll.com/alabama-crimson-tide-football/87099/alabama-football-2026-vs-auburn-previewing-the-tiger-offense",
+      "words": 676
+    },
+    {
+      "end_bp": 1495,
+      "kind": "article",
+      "read_minutes": 8,
+      "source": "Hacker News — front page",
+      "start_bp": 583,
+      "title": "Holy shit holy shit holy shit holy shit: The magnitude of what’s now happening",
+      "topic": "ai-ds",
+      "url": "https://scottaaronson.blog/?p=10379",
+      "words": 1766
+    },
+    {
+      "end_bp": 2018,
+      "kind": "article",
+      "read_minutes": 4,
+      "source": "Roll 'Bama Roll",
+      "start_bp": 1495,
+      "title": "Alabama Basketball vs Kansas State: 3 Keys, How to Watch",
+      "topic": "cfb",
+      "url": "https://www.rollbamaroll.com/alabama-crimson-tide-basketball/87147/alabama-basketball-vs-kansas-state-3-keys-how-to-watch",
+      "words": 975
+    },
+    {
+      "end_bp": 2740,
+      "kind": "article",
+      "read_minutes": 5,
+      "source": "Hacker News — front page",
+      "start_bp": 2018,
+      "title": "Intel One Mono font (2023)",
+      "topic": "ai-ds",
+      "url": "https://github.com/intel/intel-one-mono",
+      "words": 1141
+    },
+    {
+      "end_bp": 6577,
+      "kind": "article",
+      "read_minutes": 21,
+      "source": "Latent Space",
+      "start_bp": 2740,
+      "title": "[AINews] Math Proofs Are Landing Faster Than We Can Read Them",
+      "topic": "ai-engineering",
+      "url": "https://latent.space/p/ainews-math-proofs-are-landing-faster-than-we-can-read-them/",
+      "words": 4763
+    },
+    {
+      "end_bp": 7553,
+      "kind": "article",
+      "read_minutes": 8,
+      "source": "Statistical Modeling",
+      "start_bp": 6577,
+      "title": "Further thoughts on partisanship and polarization after the midterm elections",
+      "topic": "statistics",
+      "url": "https://statmodeling.stat.columbia.edu/2026/11/26/further-thoughts-on-partisanship-and-polarization-after-the-midterm-elections/",
+      "words": 1733
+    },
+    {
+      "end_bp": 8481,
+      "kind": "article",
+      "read_minutes": 6,
+      "source": "Silver Bulletin",
+      "start_bp": 7553,
+      "title": "☢️ Trump is radioactively unpopular",
+      "topic": "politics",
+      "url": "https://www.natesilver.net/p/trump-is-radioactively-unpopular",
+      "words": 1378
+    },
+    {
+      "end_bp": 9839,
+      "kind": "article",
+      "read_minutes": 9,
+      "source": "The Dispatch",
+      "start_bp": 8481,
+      "title": "Vance to GOP: Don’t Get Any Ideas About Amnesty",
+      "topic": "politics",
+      "url": "https://thedispatch.com/newsletter/next-right/vance-kevin-stitt-immigration-amnesty/",
+      "words": 2034
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Politics",
+      "start_bp": 9839,
+      "title": "Strobe Talbott, Journalist Who Joined Clinton’s State Department, Has Died",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/26/us/politics/strobe-talbott-dead.html",
+      "words": 31
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Politics",
+      "start_bp": 9839,
+      "title": "Trump Administration’s Cuts to SNAP Threaten Free School Meals",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/26/us/politics/snap-food-stamps-school-meals.html",
+      "words": 26
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Politics",
+      "start_bp": 9839,
+      "title": "How a Thanksgiving Tradition Connects to Presidential Powers",
+      "topic": "news",
+      "url": "https://www.nytimes.com/video/us/politics/100000011304420/trump-president-turkey-pardon-thanksgiving.html",
+      "words": 35
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Politics",
+      "start_bp": 9839,
+      "title": "Bipartisan Desire to Regulate A.I. Faces Obstacles in Congress",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/26/us/politics/ai-regulation-congress-nvidia.html",
+      "words": 30
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Politics",
+      "start_bp": 9839,
+      "title": "Trump Rejoiced in the Market’s Nvidia Surge. It Didn’t Last Long.",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/25/us/politics/trump-nvidia-stock-market.html",
+      "words": 33
+    }
+  ],
+  "date": "2026-11-26",
+  "file": "2026-11-26-thursday.epub",
+  "read_minutes": 64,
+  "sha1": "9b5f0b04049298fa6ff7d20882a623ffaa229282",
+  "size": 252798,
+  "title": "Morning Feed - Thursday",
+  "weekday": "thursday"
+}
