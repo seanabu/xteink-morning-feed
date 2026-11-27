@@ -1,0 +1,143 @@
+{
+  "articles": [
+    {
+      "end_bp": 837,
+      "kind": "article",
+      "read_minutes": 7,
+      "source": "Hacker News — front page",
+      "start_bp": 195,
+      "title": "AI made self-hosting fun again",
+      "topic": "ai-ds",
+      "url": "https://janlukas.blog/posts/ai-self-hosting",
+      "words": 1502
+    },
+    {
+      "end_bp": 1085,
+      "kind": "article",
+      "read_minutes": 3,
+      "source": "Roll 'Bama Roll",
+      "start_bp": 837,
+      "title": "Alabama Football 2026 vs Auburn: Previewing the Tiger Defense",
+      "topic": "cfb",
+      "url": "https://www.rollbamaroll.com/alabama-game-previews/87269/alabama-football-2026-vs-auburn-previewing-the-tiger-defense",
+      "words": 624
+    },
+    {
+      "end_bp": 1506,
+      "kind": "article",
+      "read_minutes": 4,
+      "source": "Hacker News — Show HN",
+      "start_bp": 1085,
+      "title": "Show HN: Grind, my OpenDocument native office suite built in Rust",
+      "topic": "ai-builds",
+      "url": "https://github.com/fwilhe2/grind",
+      "words": 917
+    },
+    {
+      "end_bp": 1846,
+      "kind": "article",
+      "read_minutes": 3,
+      "source": "Hacker News — front page",
+      "start_bp": 1506,
+      "title": "Group chat where your AI talks behind your back",
+      "topic": "ai-ds",
+      "url": "https://construct22.com/",
+      "words": 748
+    },
+    {
+      "end_bp": 2471,
+      "kind": "article",
+      "read_minutes": 6,
+      "source": "Hacker News — Show HN",
+      "start_bp": 1846,
+      "title": "Show HN: I restored Palm's last device, and brought its OS to other platforms",
+      "topic": "ai-builds",
+      "url": "https://www.webosarchive.org/pivot/2026/11/27/the-story-so-far/",
+      "words": 1287
+    },
+    {
+      "end_bp": 9005,
+      "kind": "article",
+      "read_minutes": 77,
+      "source": "Latent Space",
+      "start_bp": 2471,
+      "title": "How Clay Builds GTM Agents — Jeff Barg, Head of AI",
+      "topic": "ai-engineering",
+      "url": "https://latent.space/p/how-clay-builds-gtm-agents-jeff-barg-head-of-ai/",
+      "words": 17710
+    },
+    {
+      "end_bp": 9473,
+      "kind": "article",
+      "read_minutes": 5,
+      "source": "Roll 'Bama Roll",
+      "start_bp": 9005,
+      "title": "Jumbo Package: Iron Bowl previews, Black Friday open thread",
+      "topic": "cfb",
+      "url": "https://www.rollbamaroll.com/alabama-crimson-tide-football/87289/alabama-football-auburn-iron-bowl-previews-predictions-black-friday-open-thread",
+      "words": 1095
+    },
+    {
+      "end_bp": 9900,
+      "kind": "article",
+      "read_minutes": 5,
+      "source": "The Dispatch",
+      "start_bp": 9473,
+      "title": "The 2028 Presidential Race Has Already Begun",
+      "topic": "politics",
+      "url": "https://thedispatch.com/podcast/dispatch-podcast/the-2028-presidential-race-has-already-begun/",
+      "words": 1086
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Politics",
+      "start_bp": 9900,
+      "title": "In Democrats vs. Trump, the Loser May Be Federal Contractors",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/27/us/politics/trump-congressional-investigations-contractors.html",
+      "words": 33
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Politics",
+      "start_bp": 9900,
+      "title": "Five Big Questions for the 2028 Presidential Race",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/27/us/politics/2028-presidential-race-questions.html",
+      "words": 27
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Politics",
+      "start_bp": 9900,
+      "title": "Thanksgiving Is Back on the Menu for Francesca Hong, the Failed Wisconsin Governor Candidate",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/26/us/politics/thanksgiving-wisconsin-governor-francesca-hong.html",
+      "words": 34
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Politics",
+      "start_bp": 9900,
+      "title": "How Our Reporters Navigate Politics at Thanksgiving",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/25/insider/thanksgiving-dinner-politics-conversation.html",
+      "words": 34
+    }
+  ],
+  "date": "2026-11-27",
+  "file": "2026-11-27-friday.epub",
+  "read_minutes": 110,
+  "sha1": "9185166b4e50d479b15db8f3d9c4c5dbfca38fed",
+  "size": 361653,
+  "title": "Morning Feed - Friday",
+  "weekday": "friday"
+}
