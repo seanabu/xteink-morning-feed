@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
+  <id>urn:morning-feed:sean:root</id>
+  <title>Morning Feed</title>
+  <updated>2026-11-28T19:00:28Z</updated>
+  <author><name>Morning Feed</name></author>
+  <link rel="self" href="https://www.seanabu.com/xteink-morning-feed/sean/opds/root.xml" type="application/atom+xml;profile=opds-catalog;kind=acquisition"/>
+  <link rel="start" href="https://www.seanabu.com/xteink-morning-feed/sean/opds/root.xml" type="application/atom+xml;profile=opds-catalog;kind=acquisition"/>
+  <entry>
+    <title>Morning Feed - Saturday</title>
+    <id>urn:morning-feed:sean:2026-11-28</id>
+    <updated>2026-11-28T19:00:28Z</updated>
+    <author><name>Sat Nov 28 · 9 articles · 1h 29m</name></author>
+    <dc:language>en</dc:language>
+    <dc:issued>2026-11-28</dc:issued>
+    <summary type="text">Google's DeepCrossAttention achieves comparable model quality up to 3x faster · GGUF LLM Models with Hidden Malware on Hugging Face Reached 2400 Victims · Alabama Basketball vs Miami: 3 Keys, How to Watch · Alabama Handles Kansas State 104-91 · Code-driven AI illustrations are more useful than images from dedicated image models · [AINews] Inside the exploding Coding Data Market · An apology from Y</summary>
+    <link rel="http://opds-spec.org/acquisition" href="https://www.seanabu.com/xteink-morning-feed/sean/issues/2026-11-28-saturday.epub" type="application/epub+zip" length="516516"/>
+  </entry>
+  <entry>
+    <title>Morning Feed - Friday</title>
+    <id>urn:morning-feed:sean:2026-11-27</id>
+    <updated>2026-11-28T19:00:28Z</updated>
+    <author><name>Fri Nov 27 · 8 articles · 1h 50m</name></author>
+    <dc:language>en</dc:language>
+    <dc:issued>2026-11-27</dc:issued>
+    <summary type="text">AI made self-hosting fun again · Alabama Football 2026 vs Auburn: Previewing the Tiger Defense · Show HN: Grind, my OpenDocument native office suite built in Rust · Group chat where your AI talks behind your back · Show HN: I restored Palm's last device, and brought its OS to other platforms · How Clay Builds GTM Agents — Jeff Barg, Head of AI · Jumbo Package: Iron Bowl previews, Black Friday open</summary>
+    <link rel="http://opds-spec.org/acquisition" href="https://www.seanabu.com/xteink-morning-feed/sean/issues/2026-11-27-friday.epub" type="application/epub+zip" length="361653"/>
+  </entry>
+  <entry>
+    <title>Morning Feed - Thursday</title>
+    <id>urn:morning-feed:sean:2026-11-26</id>
+    <updated>2026-11-28T19:00:28Z</updated>
+    <author><name>Thu Nov 26 · 8 articles · 1h 4m</name></author>
+    <dc:language>en</dc:language>
+    <dc:issued>2026-11-26</dc:issued>
+    <summary type="text">Alabama Football 2026 vs. Auburn: Previewing the Tiger Offense · Holy shit holy shit holy shit holy shit: The magnitude of what’s now happening · Alabama Basketball vs Kansas State: 3 Keys, How to Watch · Intel One Mono font (2023) · [AINews] Math Proofs Are Landing Faster Than We Can Read Them · Further thoughts on partisanship and polarization after the midterm elections · ☢️ Trump is radioactiv</summary>
+    <link rel="http://opds-spec.org/acquisition" href="https://www.seanabu.com/xteink-morning-feed/sean/issues/2026-11-26-thursday.epub" type="application/epub+zip" length="252798"/>
+  </entry>
+  <entry>
+    <title>Morning Feed - Wednesday</title>
+    <id>urn:morning-feed:sean:2026-11-25</id>
+    <updated>2026-11-28T19:00:28Z</updated>
+    <author><name>Wed Nov 25 · 11 articles · 1h 21m</name></author>
+    <dc:language>en</dc:language>
+    <dc:issued>2026-11-25</dc:issued>
+    <summary type="text">On Simple Machines: A motorcycle as my guide · Three LLM inflection points in twelve months · Alabama Falls To Baylor 68-63 · 1Password Security Incident · Ternary Bonsai 2.5 27B · Jumbo Package: Alabama players speak on Iron Bowl significance · [AINews] Gemini 4 Neon marks GDM's full return as a Frontier Lab · Substitution Solver · How to make Thanksgiving even better · USMCA, Trade, and the Char</summary>
+    <link rel="http://opds-spec.org/acquisition" href="https://www.seanabu.com/xteink-morning-feed/sean/issues/2026-11-25-wednesday.epub" type="application/epub+zip" length="481266"/>
+  </entry>
+  <entry>
+    <title>Morning Feed - Tuesday</title>
+    <id>urn:morning-feed:sean:2026-11-24</id>
+    <updated>2026-11-28T19:00:28Z</updated>
+    <author><name>Tue Nov 24 · 7 articles · 1h 3m</name></author>
+    <dc:language>en</dc:language>
+    <dc:issued>2026-11-24</dc:issued>
+    <summary type="text">LLM agents work for their parent companies, not for you · 2035 came early · Alabama Basketball vs Baylor: 3 Keys, How to Watch · Jumbo Package: LSU is getting VERY close to pushing things too far · [AINews] Jensen Is Back! and OpenAI Shows Its Pretraining Curve, joined by Microsoft · WAR and the benefits of political moderation:  Difficulties in measurement lead to challenges of inference · Why th</summary>
+    <link rel="http://opds-spec.org/acquisition" href="https://www.seanabu.com/xteink-morning-feed/sean/issues/2026-11-24-tuesday.epub" type="application/epub+zip" length="268087"/>
+  </entry>
+  <entry>
+    <title>Morning Feed - Monday</title>
+    <id>urn:morning-feed:sean:2026-11-23</id>
+    <updated>2026-11-28T19:00:28Z</updated>
+    <author><name>Mon Nov 23 · 8 articles · 54 min</name></author>
+    <dc:language>en</dc:language>
+    <dc:issued>2026-11-23</dc:issued>
+    <summary type="text">Show HN: I built a game where you are an LLM's subagent · Nvidia Reinstates Jensen Huang as CEO · Jumbo Package: Plenty on the line for Alabama vs Auburn · XNU Linux: Full OS X GUI Userspace on Linux · Ladybird's first alpha release · Alabama Crimson Tide vs Auburn Tigers Opening Odds: Cover or Not? · A statistician with Tourette’s syndrome · Say goodbye to anonymous posting</summary>
+    <link rel="http://opds-spec.org/acquisition" href="https://www.seanabu.com/xteink-morning-feed/sean/issues/2026-11-23-monday.epub" type="application/epub+zip" length="327133"/>
+  </entry>
+  <entry>
+    <title>Morning Feed - Sunday</title>
+    <id>urn:morning-feed:sean:2026-11-22</id>
+    <updated>2026-11-28T19:00:28Z</updated>
+    <author><name>Sun Nov 22 · 7 articles · 1h 12m</name></author>
+    <dc:language>en</dc:language>
+    <dc:issued>2026-11-22</dc:issued>
+    <summary type="text">Hillstone · Inkling-2-Mini in 5.4 GB Memory · 87% of the Anthropic power will come from gas and 11% from coal in 2028 · Show HN: Zero C# – C# without a runtime or GC · [AINews] Riemann Hypothesis proved...twice independently · Our Best Stuff on the Spate of Tech Outages · Will AI Growth Reach the Developing World?</summary>
+    <link rel="http://opds-spec.org/acquisition" href="https://www.seanabu.com/xteink-morning-feed/sean/issues/2026-11-22-sunday.epub" type="application/epub+zip" length="396332"/>
+  </entry>
+</feed>
