@@ -1,0 +1,165 @@
+{
+  "articles": [
+    {
+      "end_bp": 798,
+      "kind": "article",
+      "read_minutes": 6,
+      "source": "Hacker News — front page",
+      "start_bp": 191,
+      "title": "Google's DeepCrossAttention achieves comparable model quality up to 3x faster",
+      "topic": "ai-ds",
+      "url": "https://research.google/blog/supercharging-transformer-residual-connections/",
+      "words": 1324
+    },
+    {
+      "end_bp": 2187,
+      "kind": "article",
+      "read_minutes": 14,
+      "source": "Hacker News — front page",
+      "start_bp": 798,
+      "title": "GGUF LLM Models with Hidden Malware on Hugging Face Reached 2400 Victims",
+      "topic": "ai-ds",
+      "url": "https://malspark.com/blog/malicious-gguf-models-hugging-face/",
+      "words": 3196
+    },
+    {
+      "end_bp": 2633,
+      "kind": "article",
+      "read_minutes": 5,
+      "source": "Roll 'Bama Roll",
+      "start_bp": 2187,
+      "title": "Alabama Basketball vs Miami: 3 Keys, How to Watch",
+      "topic": "cfb",
+      "url": "https://www.rollbamaroll.com/alabama-crimson-tide-basketball/87295/alabama-basketball-vs-miami-3-keys-how-to-watch",
+      "words": 1227
+    },
+    {
+      "end_bp": 3068,
+      "kind": "article",
+      "read_minutes": 6,
+      "source": "Roll 'Bama Roll",
+      "start_bp": 2633,
+      "title": "Alabama Handles Kansas State 104-91",
+      "topic": "cfb",
+      "url": "https://www.rollbamaroll.com/alabama-crimson-tide-basketball/87276/alabama-handles-kansas-state-104-91",
+      "words": 1340
+    },
+    {
+      "end_bp": 3545,
+      "kind": "article",
+      "read_minutes": 4,
+      "source": "Simon Willison",
+      "start_bp": 3068,
+      "title": "Code-driven AI illustrations are more useful than images from dedicated image models",
+      "topic": "ai",
+      "url": "https://simonwillison.net/2026/Nov/28/code-driven-ai-illustrations/",
+      "words": 915
+    },
+    {
+      "end_bp": 6716,
+      "kind": "article",
+      "read_minutes": 25,
+      "source": "Latent Space",
+      "start_bp": 3545,
+      "title": "[AINews] Inside the exploding Coding Data Market",
+      "topic": "ai-engineering",
+      "url": "https://latent.space/p/ainews-inside-the-exploding-coding-data-market/",
+      "words": 5772
+    },
+    {
+      "end_bp": 7195,
+      "kind": "article",
+      "read_minutes": 6,
+      "source": "Statistical Modeling",
+      "start_bp": 6716,
+      "title": "An apology from Yuval Peres appears to be forthcoming.",
+      "topic": "statistics",
+      "url": "https://statmodeling.stat.columbia.edu/2026/11/28/yuval-peres-forthcoming-apology/",
+      "words": 1325
+    },
+    {
+      "end_bp": 8383,
+      "kind": "article",
+      "read_minutes": 10,
+      "source": "Noahpinion",
+      "start_bp": 7195,
+      "title": "It’s now or never for permitting reform in Congress",
+      "topic": "economics",
+      "url": "https://www.noahpinion.blog/p/its-now-or-never-for-permitting-reform",
+      "words": 2199
+    },
+    {
+      "end_bp": 9902,
+      "kind": "article",
+      "read_minutes": 13,
+      "source": "Noahpinion",
+      "start_bp": 8383,
+      "title": "The coming age of sodium-ion batteries",
+      "topic": "economics",
+      "url": "https://www.noahpinion.blog/p/the-coming-age-of-sodium-ion-batteries",
+      "words": 3052
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Upshot",
+      "start_bp": 9902,
+      "title": "A New Trump Tactic to Restrict Transit Funding: Rewrite the Rules",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/21/upshot/trump-transit-grants.html",
+      "words": 25
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Upshot",
+      "start_bp": 9902,
+      "title": "That ‘SNL’ Sister Sketch: It’s More Like Nonfiction",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/18/upshot/sister-snl-elder-care.html",
+      "words": 33
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Politics",
+      "start_bp": 9902,
+      "title": "Trump’s SNAP Cuts Are Costing Millions of Children Food Stamps",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/28/us/politics/snap-cuts-children-trump.html",
+      "words": 30
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Politics",
+      "start_bp": 9902,
+      "title": "This Seattle Engineering Marvel Hid a Mystery: Pyramids of Dead Fish",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/28/us/dead-fish-mystery-seattle.html",
+      "words": 25
+    },
+    {
+      "end_bp": 10000,
+      "kind": "headline",
+      "read_minutes": 1,
+      "source": "NYT — Politics",
+      "start_bp": 9902,
+      "title": "Trump’s Embrace of Xi and Huang Stuns China Critics in Washington",
+      "topic": "news",
+      "url": "https://www.nytimes.com/2026/11/28/us/politics/trump-china-critics-nvidia.html",
+      "words": 21
+    }
+  ],
+  "date": "2026-11-28",
+  "file": "2026-11-28-saturday.epub",
+  "read_minutes": 89,
+  "sha1": "2ca9de3ae278e82568a684a525253e38050306ac",
+  "size": 516516,
+  "title": "Morning Feed - Saturday",
+  "weekday": "saturday"
+}
